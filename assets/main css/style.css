@@ -30,15 +30,88 @@ a:hover {
 h1,h2,h3,h4,h5,h6 {
   font-family: "Raleway", sans-serif;
 }
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  overflow: hidden;
+  background: #fff;
+}
 
+#preloader:before {
+  content: "";
+  position: fixed;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  border: 6px solid #428bca;
+  border-top-color: #fff;
+  border-bottom-color: #fff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: animate-preloader 1s linear infinite;
+  animation: animate-preloader 1s linear infinite;
+}
+@-webkit-keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 99999;
+  background: #428bca;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  transition: all 0.4s;
+}
+
+.back-to-top i {
+  font-size: 24px;
+  color: #fff;
+  line-height: 0;
+}
+
+.back-to-top:hover {
+  background: #629fd3;
+  color: #fff;
+}
+
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+}
 #header {
   background-color: var(--menu-color);
   padding: 0 0;
   transition: var(--transition);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
+
 #header .container{
-  padding: 0;
+  padding: 5px 0;
 }
 .navbar-brand .f-logo {
   padding: 5px 5px 5px 0px;
@@ -47,75 +120,92 @@ h1,h2,h3,h4,h5,h6 {
   padding: 5px;
 }
 
-.navbar-toggler-icon {
-  color: #fff;
-}
-
-.navbar ul {
-  margin: 0;
+ul.navbar-nav {
   padding: 0;
-  list-style: none;
-  display: flex;
+  margin: 0;
   align-items: center;
+  justify-content: space-between;
+  list-style-type: none;
 }
-
-.navbar li {
+li.nav-item {
   position: relative;
 }
-a.nav-link{
-  margin: 0px 7px;
-}
-.navbar a {
+a.nav-link {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0 10px 30px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
   color: #fff;
+  transition: 0.3s;
+  white-space:  nowrap;
+}
+.navbar-nav .nav-link.active {
+  color: #428bca;
+}
+a.nav-link:hover{
+  color: #428bca;
+}
+ul.dropdown-menu.show {
+  margin-top: 20px;
+}
+.dropdown-menu li{
+  position: relative;
+}
+.dropdown-menu .submenu {
+  position: absolute;
+  display: none;
+  left: 100%;
+  top:0;
+}
+
+.dropdown-menu>li:hover .submenu{
+  display: block;
+}
+ul.dropdown-menu.show{
+  background-color: var(--menu-color);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.submenu{
+  background-color: var(--menu-color);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+a.dropdown-item {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+}
+a.dropdown-item:hover{
+background: none;
+  color: #428bca;
+}
+
+.btn-download {
+  background:#428bca;
+  outline: none;
+  padding: 5px 15px;
+  border-radius: 2px;
+  color: #ffff;
   font-size: 12px;
   text-transform: uppercase;
-  padding: 10px 5px 10px 30px;
-  font-weight: 600;
-  transition: var(--transition);
-}
-
-.navbar a:focus {
-  color: #be914f;
-}
-
-.navbar a i,
-.navbar a:focus i {
-  font-size: 16px;
-  color: #fff;
-  margin-left: auto;
-}
-
-.navbar a:hover,
-.navbar .active,
-.navbar .active:focus,
-.navbar li:hover > a {
-  color: var(--h-color);
-}
-
-.navbar .down-item {
-  position: absolute;
-  background-color: var(--menu-color);
-  padding-right: 15px;
   margin-left: 15px;
-  display: block;
-  margin-top: 17px;
-  width: max-content;
-  line-height: 1rem;
-  opacity: 0;
-  transition: var(--transition);
+}
+.btn-download:hover,
+.btn-download:focus{
+  background: #D3B16F;
+  color: #ffff;
 }
 
-.navbar .down:hover > .down-item {
-  opacity: 1;
-  z-index: 1000;
-}
 
 
 /* Carousel Item CSS */
 .carouselhome .carousel-item{
   height:100vh;
-  background-position: center;
+  background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
@@ -133,7 +223,8 @@ a.nav-link{
 .carouselhome .carousel-item .carousel-caption{
   z-index: 2;
   text-align: center;
-  margin-bottom: 8rem;
+  padding-bottom: 10%;
+
 }
 .carouselhome .carousel-item .carousel-caption h2{
   font-family: 'Raleway', sans-serif;
@@ -141,7 +232,8 @@ a.nav-link{
   font-weight: 700;
   text-align: center;
   color: #faf1f1;
-  margin-bottom: 2rem;
+  margin-bottom: 20px;
+
 }
 
 .carouselhome .carousel-item .carousel-caption p{
@@ -149,7 +241,8 @@ a.nav-link{
   font-weight: 500;
   text-align: center;
   color: #fcf4f4;
-  margin-bottom: 2rem;
+  margin: 30px 0;
+
 }
 
 .carouselhome .carousel-item .carousel-caption .btn-started{
@@ -290,35 +383,43 @@ a.nav-link{
 
 
 /* Skill Section Start */
-.skills{
-  padding: 80px 0;
+
+.skills {
+  padding-top: 0;
   background-color: #fff;
 }
-.skills .progress{
+
+.skills .progress {
   height: 60px;
   display: block;
   background: none;
   border-radius: 0;
 }
-.skills .progress .skill{
+
+.skills .progress .skill {
   padding: 10px 0;
   margin: 0;
   text-transform: uppercase;
-  font-size: 14px;
-  font-family:"poppins",sans-serif;
+  display: block;
   font-weight: 600;
-  color:#394047 ;
+  font-family: "Poppins", sans-serif;
+  color: #394047;
 }
-.skills .progress .val{
+
+.skills .progress .skill .val {
   float: right;
   font-style: normal;
 }
-.skills .progress-bar-wrap{
-  background-color: #e3e6e9;
+
+.skills .progress-bar-wrap {
+  background: #e3e6e9;
 }
-.skills .progress-bar{
+
+.skills .progress-bar {
+  width: 1px;
   height: 10px;
-  background-color: var(--second-color);
+  transition: 0.9s;
+  background-color: #428bca;
 }
 /* Skill Section End */
 

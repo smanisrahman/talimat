@@ -20,34 +20,55 @@
   <link rel="stylesheet" href="assets/main css/style.css" />
 </head>
 
-<body>
+<body class="">
   <!-- Header Section start Here -->
   <header id="header" class="fixed-top">
-    <nav class="navbar navbar-expand">
-      <div class="container">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+      <div class="container d-flex align-items-center justify-content-between">
         <a class="navbar-brand" href="#"><img class="f-logo" src="assets/images/211.png" /><img class="s-logo"
-            src="assets/images/loward.png" /></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          src="assets/images/loward.png" /></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbars" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav ms-auto">
-            <li><a class="nav-link" href="#hero-carousel">Home</a></li>
-            <li><a class="nav-link" href="#about">About</a></li>
-            <li><a class="nav-link" href="#services">Services</a></li>
-            <li><a class="nav-link" href="#portfolio">Portfolio</a></li>
-            <li><a class="nav-link" href="#team">Team</a></li>
-            <li class="down">
-              <a class="nav-link" href="#">Our Product<i class="bx bxs-chevron-down"></i></a>
-              <ul class="down-item">
-                <li><a href="#testimonial">Testimonial</a></li>
-                <li><a href="#">Digital Marketing</a></li>
-                <li><a href="#">Cloud Computing</a></li>
-                <li><a href="#">Data Analysis</a></li>
+        <div class="collapse navbar-collapse" id="navbars">
+          <ul class="navbar-nav ms-auto mb-2 mb-sm-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>  
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#team">Team</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
+              <ul class="dropdown-menu" aria-labelledby="dropdown">
+                <li><a class="dropdown-item" href="#">Dropdown-1</a></li>
+                <li><a class="dropdown-item" href="#">Dropdown-2</a></li>
+                <li><a class="dropdown-item" href="#">Dropdown-3<i class="bx bxs-chevron-right"></i></a>
+                  <ul class="dropdown-menu submenu">
+                    <li><a class="dropdown-item" href="#">Subitem-1</a></li>
+                    <li><a class="dropdown-item" href="#">Subitem-2</a></li>
+                    <li><a class="dropdown-item" href="#">Subitem-3</a></li>
+                    <li><a class="dropdown-item" href="#">Subitem-4</a></li>
+                    <li><a class="dropdown-item" href="#">Subitem-5</a></li>
+                  </ul>
+                </li>
+                <li><a class="dropdown-item" href="#">Dropdown-4</a></li>
+                <li><a class="dropdown-item" href="#">Dropdown-5 </a></li>
               </ul>
             </li>
-            <li><a class="nav-link" href="#contact">Contact</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <button class="btn btn-info btn-download">Download</button>
           </ul>
         </div>
       </div>
@@ -173,67 +194,34 @@
   <!-- Skill Section Start -->
   <section id="skills" class="skills">
     <div class="container-fluid">
-      <div class="row justify-content-center skills-content">
+      <div class="row justify-content-center">
         <div class="col-xl-5 col-lg-6">
           <div class="progress">
             <span class="skill">Html<i class="val">100%</i></span>
             <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"
-              ></div>
+              <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemax="100" aria-valuemin="0"></div>
             </div>
           </div>
           <div class="progress">
-            <span class="skill">css<i class="val">90%</i></span>
+            <span class="skill">Html<i class="val">100%</i></span>
             <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"
-              ></div>
+              <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemax="100" aria-valuemin="0"></div>
             </div>
           </div>
           <div class="progress">
-            <span class="skill">java srcipt<i class="val">75%</i></span>
+            <span class="skill">Html<i class="val">100%</i></span>
             <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
-                ></div>
+              <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemax="100" aria-valuemin="0"></div>
             </div>
           </div>
           <div class="progress">
-            <span class="skill">Graphics<i class="val">99%</i></span>
+            <span class="skill">Html<i class="val">100%</i></span>
             <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100"
-                ></div>
+              <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemax="100" aria-valuemin="0"></div>
             </div>
           </div>
         </div>
-        <div class="col-xl-5 col-lg-6">
-          <div class="progress">
-            <span class="skill">php<i class="val">85%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"
-                ></div>
-            </div>
-          </div>
-          <div class="progress">
-            <span class="skill">mysql<i class="val">70%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
-                ></div>
-            </div>
-          </div>
-          <div class="progress">
-            <span class="skill">laravel<i class="val">60%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-                ></div>
-            </div>
-          </div>
-          <div class="progress">
-            <span class="skill">Multi media<i class="val">90%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"
-                ></div>
-            </div>
-          </div>
-        </div>
+        <div class="col-xl-5 col-lg-6"></div>
       </div>
     </div>
   </section>
@@ -377,7 +365,7 @@
           <div class="cta-item text-white">
             <h3>Call To Action</h3>
             <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <a href="#skills" class="btn btn-lg btn-cta">Call To Action</a>
+            <a href="#" class="btn btn-lg btn-cta">Call To Action</a>
           </div>
         </div>
       </div>
@@ -545,6 +533,32 @@
                   <p>Card</p>
                   <div class="portfolio-links">
                     <a href="assets/images/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class='bx bx-plus'></i></a>
+                    <a href="portfolio-details.html" title="More Details"><i class='bx bx-link'></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-app">
+              <div class="portfolio-wrap">
+                <img src="assets/images/portfolio/portfolio-10.jpg" class="img-fluid" alt=""/>
+                <div class="portfolio-info">
+                  <h4>App 2</h4>
+                  <p>App</p>
+                  <div class="portfolio-links">
+                    <a href="assets/images/portfolio/portfolio-10.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class='bx bx-plus'></i></a>
+                    <a href="portfolio-details.html" title="More Details"><i class='bx bx-link'></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-web">
+              <div class="portfolio-wrap">
+                <img src="assets/images/portfolio/portfolio-11.jpg" class="img-fluid" alt=""/>
+                <div class="portfolio-info">
+                  <h4>Card 2</h4>
+                  <p>Card</p>
+                  <div class="portfolio-links">
+                    <a href="assets/images/portfolio/portfolio-11.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class='bx bx-plus'></i></a>
                     <a href="portfolio-details.html" title="More Details"><i class='bx bx-link'></i></a>
                   </div>
                 </div>
@@ -864,24 +878,8 @@
       </div>
     </div> 
   </footer>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <div id="placeholder"></div>
+    <a href="#" class="back-to-top d-flex justify-content-center align-items-center"><i class="bi bi-arrow-up-short"></i></a>
   <script src="assets/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/bootstrap/js/bootstrap.bundle.js"></script>
   <script src="assets/glightbox/js/glightbox.min.js"></script>
